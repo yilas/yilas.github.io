@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>git on Quelques trucs sur l&#39;IT</title>
+        <link>https://yilas.github.io/tags/git/</link>
+        <description>Recent content in git on Quelques trucs sur l&#39;IT</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 25 Jul 2023 14:17:58 +0200</lastBuildDate><atom:link href="https://yilas.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Secrets hunter</title>
+        <link>https://yilas.github.io/p/git-secrets-hunter/</link>
+        <pubDate>Tue, 25 Jul 2023 14:17:58 +0200</pubDate>
+        
+        <guid>https://yilas.github.io/p/git-secrets-hunter/</guid>
+        <description>&lt;img src="https://yilas.github.io/p/git-secrets-hunter/telling-secrets-big-e1379620235254.jpg" alt="Featured image of post Secrets hunter" /&gt;&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Searching for secrets such as passwords, authentication tokens, API keys, AWS keys, etc. in Git repositories is of crucial importance for several reasons linked to IT security and the protection of sensitive data:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Protecting sensitive information: Secrets, such as passwords and API keys, are used to access sensitive resources or specific services. If they are exposed publicly in a Git repository, this can lead to potential security breaches and compromise data confidentiality and integrity.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Attack prevention: Hackers actively seek out secrets exposed in Git repositories to gain illegal access to sensitive systems and data. Proactively searching for these secrets helps prevent potential attacks before they happen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Security compliance: Numerous security regulations and standards, such as the RGPD (General Data Protection Regulation), require organizations to take steps to protect sensitive information. Detecting and properly managing secrets exposed in Git repositories is essential to comply with these requirements.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Protecting cloud service access keys: Cloud service access keys, such as AWS keys, are used to access an organization&amp;rsquo;s cloud resources and services. Exposing these keys in Git repositories can result in high costs due to unauthorized use of cloud services.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Securing open source projects: Many open source projects are hosted on version control platforms such as GitHub. Searching for secrets in these projects is essential to ensure their security and prevent malicious actors from exploiting vulnerabilities.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Developer security awareness: By actively searching for secrets in Git repositories, developers are made aware of the risks associated with the accidental inclusion of sensitive information in source code. This encourages them to adopt good secret management practices.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some tools are used to hunt that kind of secrets. Here are 3 tools on which I will focus :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/praetorian-inc/noseyparker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NoseyParker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/gitleaks/gitleaks&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitLeaks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/trufflesecurity/trufflehog&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;TruffleHog&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;noseyparker&#34;&gt;NoseyParker&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/praetorian-inc/noseyparker&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NoseyParker&lt;/a&gt;&lt;/strong&gt; is an open source tool designed to search and identify sensitive information and secrets in public code repositories on GitHub. It is primarily a code scanning tool that seeks to detect private information that may be inadvertently exposed in public source code. Although NoseyParker is useful for public repositories, it is not suitable for private repositories or other version control systems.&lt;/p&gt;
+&lt;h2 id=&#34;gitleaks&#34;&gt;GitLeaks&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;GitLeaks&lt;/strong&gt; is another popular open source tool used to search for secrets and sensitive information in Git repositories. It supports both public and private repositories, making it more versatile than NoseyParker. GitLeaks works by performing a static analysis of Git repositories to detect potentially exposed passwords, API keys, authentication tokens and other sensitive information. Detection rules can also be customized to suit the specific needs of each project.&lt;/p&gt;
+&lt;h2 id=&#34;trufflehog&#34;&gt;TruffleHog&lt;/h2&gt;
+&lt;p&gt;TruffleHog is an open source security tool designed specifically to detect sensitive secrets that might be exposed in Git repositories. It performs an in-depth search of the entire repository history, enabling it to find sensitive information even if it has been removed from the current code. TruffleHog is capable of detecting a wide range of sensitive information, including encryption keys, passwords, API keys and other types of secrets. It is particularly useful in collaborative development environments where several people may contribute to the code and accidentally introduce sensitive information.&lt;/p&gt;
+&lt;h1 id=&#34;installation&#34;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;All tools are installed by using asdf (TBD). More installations possibities are given in detail, for each applications.&lt;/p&gt;
+&lt;h1 id=&#34;noseyparker-1&#34;&gt;NoseyParker&lt;/h1&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://github.com/praetorian-inc/noseyparker#installation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;installation&lt;/a&gt; can be done with &lt;a class=&#34;link&#34; href=&#34;https://github.com/praetorian-inc/noseyparker/releases/latest&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;pre-built binaries&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://github.com/praetorian-inc/noseyparker#docker-image&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;docker images&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://github.com/praetorian-inc/noseyparker#building-from-source&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;from source&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Results are stored in a datastore, a &lt;a class=&#34;link&#34; href=&#34;https://www.sqlite.org/index.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SQLite&lt;/a&gt; database.&lt;/p&gt;
+&lt;h3 id=&#34;scan&#34;&gt;Scan&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;noseyparker scan --datastore ~/tmp/gitlab-dump.db .
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;An example of output returned by that command&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt; Rule                                       Distinct Matches   Total Matches 
+─────────────────────────────────────────────────────────────────────────────
+ Generic Password &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;single quoted&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                        &lt;span class=&#34;m&#34;&gt;142&lt;/span&gt;           2,650 
+ Generic Secret                                           &lt;span class=&#34;m&#34;&gt;95&lt;/span&gt;           1,409 
+ Generic API Key                                          &lt;span class=&#34;m&#34;&gt;92&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;826&lt;/span&gt; 
+ JSON Web Token &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;base64url-encoded&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                       &lt;span class=&#34;m&#34;&gt;70&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;407&lt;/span&gt; 
+ PEM-Encoded Private Key                                  &lt;span class=&#34;m&#34;&gt;63&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;141&lt;/span&gt; 
+ Generic Password &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;double quoted&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                         &lt;span class=&#34;m&#34;&gt;59&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;515&lt;/span&gt; 
+ Generic Username and Password &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;unquoted&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                 &lt;span class=&#34;m&#34;&gt;31&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;116&lt;/span&gt; 
+ AWS API Key                                              &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;279&lt;/span&gt; 
+ bcrypt Hash                                              &lt;span class=&#34;m&#34;&gt;24&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;63&lt;/span&gt; 
+ Generic Username and Password &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;quoted&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;                   &lt;span class=&#34;m&#34;&gt;22&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;92&lt;/span&gt; 
+ Sauce Token                                              &lt;span class=&#34;m&#34;&gt;16&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;40&lt;/span&gt; 
+ netrc Credentials                                        &lt;span class=&#34;m&#34;&gt;13&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;93&lt;/span&gt; 
+ AWS Secret Access Key                                    &lt;span class=&#34;m&#34;&gt;11&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;71&lt;/span&gt; 
+ AWS Account ID                                           &lt;span class=&#34;m&#34;&gt;10&lt;/span&gt;             &lt;span class=&#34;m&#34;&gt;260&lt;/span&gt; 
+ Credentials in ODBC Connection String                     &lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;30&lt;/span&gt; 
+ OpenAI API Key                                            &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;               &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; 
+ GitLab Personal Access Token                              &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;55&lt;/span&gt; 
+ Slack Webhook                                             &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;31&lt;/span&gt; 
+ Google OAuth Client Secret                                &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;              &lt;span class=&#34;m&#34;&gt;73&lt;/span&gt; 
+ Google Client ID                                          &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt;               &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt; 
+ Shopify Domain                                            &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;               &lt;span class=&#34;m&#34;&gt;3&lt;/span&gt; 
+ Google API Key                                            &lt;span class=&#34;m&#34;&gt;2&lt;/span&gt;               &lt;span class=&#34;m&#34;&gt;5&lt;/span&gt; 
+ Slack                                                     &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;               &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;  
+ CodeClimate                                               &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;               &lt;span class=&#34;m&#34;&gt;7&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;reporting&#34;&gt;Reporting&lt;/h3&gt;
+&lt;p&gt;Multiple output formats are available : &lt;code&gt;human&lt;/code&gt;, &lt;code&gt;json&lt;/code&gt;, &lt;code&gt;jsonl&lt;/code&gt; and &lt;code&gt;sarif&lt;/code&gt; (&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/fr/code-security/code-scanning/integrating-with-code-scanning/sarif-support-for-code-scanning&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;Static Analysis Results Interchange Format&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;noseyparker report --datastore ~/tmp/gitlab-dump -f jsonl
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;The output of the report, in an human format,&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;Match: AKIA111111111EXAMPLE
+
+    Occurrence 1/2
+    Git repo: gitlab-dump/repo01/.git
+    Blob: af5626b4a114abcb82d63db7c8082c3c4756e51b
+    Lines: 870:31-870:50
+
+        &amp;#34;UserName&amp;#34;: &amp;#34;Alice&amp;#34;
+                },
+                &amp;#34;output&amp;#34;: {
+                  &amp;#34;AccessKeyMetadata&amp;#34;: [
+                    {
+                      &amp;#34;AccessKeyId&amp;#34;: &amp;#34;AKIA111111111EXAMPLE&amp;#34;,
+                      &amp;#34;CreateDate&amp;#34;: &amp;#34;2018-12-01T22:19:58Z&amp;#34;,
+                      &amp;#34;Status&amp;#34;: &amp;#34;Active&amp;#34;,
+                      &amp;#34;UserName&amp;#34;: &amp;#34;Alice&amp;#34;
+             
+
+    Occurrence 2/2
+    Git repo: gitlab-dump/repo01/.git
+    Blob: af5626b4a114abcb82d63db7c8082c3c4756e51b
+    Lines: 699:31-699:50
+
+        &amp;#34;UserName&amp;#34;: &amp;#34;Alice&amp;#34;
+                },
+                &amp;#34;output&amp;#34;: {
+                  &amp;#34;AccessKeyMetadata&amp;#34;: [
+                    {
+                      &amp;#34;AccessKeyId&amp;#34;: &amp;#34;AKIA111111111EXAMPLE&amp;#34;,
+                      &amp;#34;CreateDate&amp;#34;: &amp;#34;2018-12-01T22:19:58Z&amp;#34;,
+                      &amp;#34;Status&amp;#34;: &amp;#34;Active&amp;#34;,
+                      &amp;#34;UserName&amp;#34;: &amp;#34;Alice&amp;#34;
+             
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;pros--cons&#34;&gt;Pros / Cons&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Pros:
+&lt;ul&gt;
+&lt;li&gt;Time to scan. Here is an example&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;Found 42.37 GiB from 293,195 plain files and 514,137 blobs from &lt;span class=&#34;m&#34;&gt;632&lt;/span&gt; Git repos &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;00:00:04&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+Scanning content  ████████████████████ 100%  42.37 GiB/42.37 GiB  &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;00:01:25&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+Scanned 34.92 GiB from 694,395 blobs in &lt;span class=&#34;m&#34;&gt;85&lt;/span&gt; seconds &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;419.42 MiB/s&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; 7,176/7,176 new matches
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;Cons:
+TBC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;issues-i-met&#34;&gt;Issues I met&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h1 id=&#34;gitleaks-1&#34;&gt;Gitleaks&lt;/h1&gt;
+&lt;h3 id=&#34;pros--cons-1&#34;&gt;Pros / Cons&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h3 id=&#34;issues-i-met-1&#34;&gt;Issues I met&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h1 id=&#34;trufflehog-1&#34;&gt;TruffleHog&lt;/h1&gt;
+&lt;h3 id=&#34;pros--cons-2&#34;&gt;Pros / Cons&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h3 id=&#34;issues-i-met-2&#34;&gt;Issues I met&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
