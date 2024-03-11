@@ -152,6 +152,8 @@ data-flex-basis="452px"
 &lt;/ol>
 &lt;p>En résumé, &lt;a class="link" href="https://aws.amazon.com/fargate/?nc1=h_ls" target="_blank" rel="noopener"
 >AWS Fargate&lt;/a> simplifie le déploiement et la gestion de conteneurs en éliminant la nécessité de gérer l&amp;rsquo;infrastructure sous-jacente, tout en offrant une expérience sans serveur pour l&amp;rsquo;exécution de vos charges de travail conteneurisées. Cela permet aux développeurs de se concentrer davantage sur le développement d&amp;rsquo;applications et de services, plutôt que sur la gestion des serveurs et de l&amp;rsquo;infrastructure.&lt;/p>
+&lt;h5 id="difference-with-ecs-">Difference with ECS ?&lt;/h5>
+&lt;p>Question : Quelle différence entre Aws Fargate et Aws ECS ?&lt;/p>
 &lt;h4 id="aws-lightsail">AWS Lightsail&lt;/h4>
 &lt;ul>
 &lt;li>deploy preconfigured application : wordpress, etc&lt;/li>
@@ -508,8 +510,8 @@ data-flex-basis="502px"
 &lt;p>&lt;strong>Gateway de Bande (Tape Gateway)&lt;/strong> Offre une interface iSCSI pour les applications de sauvegarde afin d&amp;rsquo;archiver des données sur Amazon S3 ou Glacier sous forme de bandes virtuelles.&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;p>En résumé, [AWS Storage Gateway](&lt;a class="link" href="https://aws.amazon.com/storagegateway/?nc1=h_ls" target="_blank" rel="noopener"
->https://aws.amazon.com/storagegateway/?nc1=h_ls&lt;/a> offre une solution flexible et transparente pour l&amp;rsquo;intégration des systèmes de stockage sur site avec le cloud AWS, facilitant la gestion, la sauvegarde, et l&amp;rsquo;archivage des données de manière efficace et sécurisée.&lt;/p>
+&lt;p>En résumé, &lt;a class="link" href="https://aws.amazon.com/storagegateway/?nc1=h_ls" target="_blank" rel="noopener"
+>AWS Storage Gateway&lt;/a> offre une solution flexible et transparente pour l&amp;rsquo;intégration des systèmes de stockage sur site avec le cloud AWS, facilitant la gestion, la sauvegarde, et l&amp;rsquo;archivage des données de manière efficace et sécurisée.&lt;/p>
 &lt;h3 id="aws-backup">AWS Backup&lt;/h3>
 &lt;ul>
 &lt;li>help manage data backups from EC2, EBS, EFS, etc.&lt;/li>
@@ -558,8 +560,8 @@ data-flex-basis="502px"
 &lt;p>&lt;strong>Gestion Centralisée&lt;/strong> AWS Backup est adopté par les organisations avec plusieurs comptes AWS pour une gestion centralisée des sauvegardes à travers différents services.&lt;/p>
 &lt;/li>
 &lt;/ul>
-&lt;p>En résumé, [AWS Backup](&lt;a class="link" href="https://aws.amazon.com/backup/?nc1=h_ls" target="_blank" rel="noopener"
->https://aws.amazon.com/backup/?nc1=h_ls&lt;/a> simplifie et centralise la gestion des sauvegardes pour les services AWS, offrant ainsi une solution complète pour la protection et la récupération des données dans le cloud AWS.&lt;/p>
+&lt;p>En résumé, &lt;a class="link" href="https://aws.amazon.com/backup/?nc1=h_ls" target="_blank" rel="noopener"
+>AWS Backup&lt;/a> simplifie et centralise la gestion des sauvegardes pour les services AWS, offrant ainsi une solution complète pour la protection et la récupération des données dans le cloud AWS.&lt;/p>
 &lt;h3 id="time-to-remember-when-studying-for-the-exam-1">Time to remember when Studying for the Exam&lt;/h3>
 &lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-19.png"
 width="1254"
@@ -661,6 +663,8 @@ data-flex-basis="425px"
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
+&lt;p>Difference between Amazon Global Accelerator and CDN : &lt;a class="link" href="https://aws.amazon.com/blogs/networking-and-content-delivery/well-architecting-online-applications-with-cloudfront-and-aws-global-accelerator/" target="_blank" rel="noopener"
+>https://aws.amazon.com/blogs/networking-and-content-delivery/well-architecting-online-applications-with-cloudfront-and-aws-global-accelerator/&lt;/a>&lt;/p>
 &lt;p>&lt;a class="link" href="https://aws.amazon.com/global-accelerator/" target="_blank" rel="noopener"
 >Amazon Global Accelerator&lt;/a> est un service proposé par Amazon Web Services (AWS) qui permet d&amp;rsquo;améliorer la disponibilité et la performance des applications en routant le trafic des utilisateurs vers les ressources AWS à travers le réseau mondial d&amp;rsquo;Amazon.&lt;/p>
 &lt;h5 id="caractéristiques-clés-7">Caractéristiques clés&lt;/h5>
@@ -3466,26 +3470,28 @@ data-flex-basis="352px"
 &lt;h3 id="elastic-beanstalk">Elastic Beanstalk&lt;/h3>
 &lt;p>Lien :&lt;/p>
 &lt;ul>
-&lt;li>&lt;a class="link" href="https://aws.amazon.com/elasticbeanstalk/" target="_blank" rel="noopener"
->https://aws.amazon.com/elasticbeanstalk/&lt;/a>&lt;/li>
+&lt;li>&lt;a class="link" href="https://aws.amazon.com/elasticbeanstalk/?nc1=h_ls" target="_blank" rel="noopener"
+>https://aws.amazon.com/elasticbeanstalk/?nc1=h_ls&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>Elastic Beanstalk allows you to deploy your web applications and web services to AWS.&lt;/p>
+&lt;p>&lt;a class="link" href="https://aws.amazon.com/elasticbeanstalk/?nc1=h_ls" target="_blank" rel="noopener"
+>Elastic Beanstalk&lt;/a> allows you to deploy your web applications and web services to AWS. Businesses upload their application, and &lt;a class="link" href="https://aws.amazon.com/elasticbeanstalk/?nc1=h_ls" target="_blank" rel="noopener"
+>Elastic Beanstalk&lt;/a> automatically handles the deployment details of capacity provisioning, load balancing, auto-scaling, and application health monitoring.&lt;/p>
 &lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-78.png"
 width="957"
 height="628"
 srcset="https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-78_hu3dc2b976d622a7a0094b178d78833cbb_39038_480x0_resize_box_3.png 480w, https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-78_hu3dc2b976d622a7a0094b178d78833cbb_39038_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="Alt text"
+alt="Elastic Beanstalk"
 class="gallery-image"
 data-flex-grow="152"
 data-flex-basis="365px"
->
-&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-79.png"
+>&lt;/p>
+&lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-79.png"
 width="1107"
 height="821"
 srcset="https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-79_hu0ea721012cb01ebf562816be33354606_39490_480x0_resize_box_3.png 480w, https://yilas.github.io/p/aws-certified-cloud-practitioner/img/image-79_hu0ea721012cb01ebf562816be33354606_39490_1024x0_resize_box_3.png 1024w"
 loading="lazy"
-alt="Alt text"
+alt="Elastic Beanstalk"
 class="gallery-image"
 data-flex-grow="134"
 data-flex-basis="323px"
@@ -4232,6 +4238,7 @@ class="gallery-image"
 data-flex-grow="174"
 data-flex-basis="418px"
 >&lt;/p>
+&lt;p>The Operational Excellence pillar includes the ability to run workloads effectively, gain insights into their operations, and continuously improve supporting processes to deliver business value.&lt;/p>
 &lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/image-4a.png"
 width="2164"
 height="1242"
@@ -4242,6 +4249,7 @@ class="gallery-image"
 data-flex-grow="174"
 data-flex-basis="418px"
 >&lt;/p>
+&lt;p>The Security pillar focuses on protecting data, systems, and assets. It also focuses on using cloud technologies to improve the security of your workloads.&lt;/p>
 &lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/image-5.png"
 width="2164"
 height="1176"
@@ -4252,6 +4260,7 @@ class="gallery-image"
 data-flex-grow="184"
 data-flex-basis="441px"
 >&lt;/p>
+&lt;p>The Reliability pillar focuses on the ability of a workload to consistently and correctly perform its intended functions.&lt;/p>
 &lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/image-6.png"
 width="2152"
 height="1160"
@@ -4262,6 +4271,7 @@ class="gallery-image"
 data-flex-grow="185"
 data-flex-basis="445px"
 >&lt;/p>
+&lt;p>The Performance Efficiency pillar focuses on using computing resources efficiently to meet system requirements, and to maintain that efficiency as demand changes and technologies evolve.&lt;/p>
 &lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/image-7.png"
 width="2166"
 height="1174"
@@ -4878,7 +4888,7 @@ data-flex-grow="203"
 data-flex-basis="487px"
 >&lt;/p>
 &lt;h3 id="exploring-additional-security-services">Exploring Additional Security Services&lt;/h3>
-&lt;h4 id="config">Config&lt;/h4>
+&lt;h4 id="aws-config">AWS Config&lt;/h4>
 &lt;p>&lt;img src="https://yilas.github.io/p/aws-certified-cloud-practitioner/AWS-Config.png"
 width="1650"
 height="1112"
